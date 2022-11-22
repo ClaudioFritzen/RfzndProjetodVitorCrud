@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'head' %}
+
+{% endblock 'head' %}
+
+{% block 'titulo' %}Specific User{% endblock 'titulo' %}
+
+{% block 'body' %}
+
+    <h1> Hello World!! estamos aqui</h1>
+
+    {% for user in user %}
+                <tr>
+                    <td> {{ user.f_name }} </td>
+                    <td> {{ user.l_name }} </td>
+                    <td> {{ user.cpf }} </td>
+                    <td> {{ user.age }} </td>
+                    <td> {{ user.email }} </td>
+                </tr>
+            {% endfor %}
+{% endblock 'body' %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Register User </title>
+    <link rel="stylesheet" href="{% static 'css/register_user_style.css' %}">
+</head>
+<body>
+    <h1> Fill the fields bellow to register a new user </h1>
+
+    <form action="{% url 'save.html' %}" method='POST'>
+        {% csrf_token %}
+
+        <label for="First Name"> First Name</label>
+        <input type="text" id="First Name" name="First Name">
+        <p> </p>
+
+        <label for="Last Name"> Last Name</label>
+        <input type="text" id="Last Name" name="Last Name">
+        <p> </p>
+
+        <label for="CPF"> CPF</label>
+        <input type="text" id="CPF" name="CPF">
+        <p> </p>
+
+        <label for="Age"> Age</label>
+        <input type="number" id="Age" name="Age">
+        <p> </p>
+
+        <label for="Email"> Email</label>
+        <input type="text" id="Email" name="Email">
+        <p> </p>
+        <button type="submit"> Save </button>
+    </form>
+
+</body>
+</html>
